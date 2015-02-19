@@ -1,0 +1,75 @@
+Source: libosmocore
+Section: libs
+Priority: optional
+Maintainer: Harald Welte <laforge@gnumonks.org>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, autoconf, automake, libtool, dh-autoreconf, libdpkg-perl, git, doxygen, libpcsclite-dev, pkg-config
+Standards-Version: 3.9.3
+Homepage: http://bb.osmocom.org/trac/wiki/libosmocore
+Vcs-Git: git://git.osmocom.org/libosmocore.git
+Vcs-Browser: http://git.osmocom.org/gitweb?p=libosmocore.git;a=summary
+
+Package: libosmocore
+Section: libs
+Architecture: any
+Depends: libosmocodec0, libosmocore6, libosmogb3, libosmogsm5, libosmovty1, ${misc:Depends}
+Description: Open Source MObile COMmunications CORE library
+
+Package: libosmocodec0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo codec library
+
+Package: libosmocore6
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo Core library
+
+Package: libosmogb3
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo GPRS GB library
+
+Package: libosmogsm5
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo GSM utility library
+
+Package: libosmovty1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo VTY library
+
+Package: libosmoctrl0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo control library
+
+Package: libosmosim0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Osmo SIM library
+
+Package: libosmocore-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libosmocore
+Description: Development headers for Open Source MObile COMmunications CORE library
+
+Package: libosmocore-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libosmocore
+Description: Utilities for gsm
+
+Package: libosmocore-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libosmocore (= ${binary:Version}), ${misc:Depends}
+Description: Debug symbols for Open Source MObile COMmunications CORE library

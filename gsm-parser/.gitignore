@@ -1,0 +1,11 @@
+*.o
+*.so
+db_import
+diag_import
+gsmtap_import
+libmetagsm.*
+metadata.db
+sm_2g.sql
+sm_3g.sql
+hex_import
+analyze.sh
